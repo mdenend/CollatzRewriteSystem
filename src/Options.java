@@ -14,6 +14,7 @@ public class Options {
     private String outputDirectory;
     private boolean isVerbose;
     private String rewriteSystemFile;
+    private boolean outputAggregateFile;
 
     /**
      * Possible options are:
@@ -32,6 +33,7 @@ public class Options {
         outputDirectory = "Output";
         isVerbose = false;
         rewriteSystemFile = "Rewrite_Systems/BasicRewriteRules.txt";
+        outputAggregateFile = false;
 
 
         for (int i = 0; i < args.length; i++) {
@@ -79,6 +81,8 @@ public class Options {
                         rewriteSystemFile = args[i+1];
                         i++;
                         break;
+                    case "aggregatefile":
+                        outputAggregateFile = true;
                     default:
                         System.err.println("Unrecognized option given: " + substring);
                         System.exit(3);
@@ -110,5 +114,9 @@ public class Options {
 
     public String getRewriteSystemFile() {
         return rewriteSystemFile;
+    }
+
+    public boolean isOutputAggregateFile() {
+        return outputAggregateFile;
     }
 }

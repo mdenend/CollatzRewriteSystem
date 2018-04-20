@@ -27,7 +27,9 @@ public class Main {
             helper.generateOutputFile();
             overallOutputHelper.addRowToOverallOutput(helper);
         }
-        overallOutputHelper.generateOutputFile();
+        if (opts.isOutputAggregateFile()) {
+            overallOutputHelper.generateOutputFile();
+        }
     }
 
 }
