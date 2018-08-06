@@ -83,6 +83,7 @@ public class Options {
                         break;
                     case "aggregatefile":
                         outputAggregateFile = true;
+                        break;
                     default:
                         System.err.println("Unrecognized option given: " + substring);
                         System.exit(3);

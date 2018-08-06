@@ -15,15 +15,20 @@ public class RewriteRule{
 
         ternaryPositionChar = -1;
         dRuleSize = 0;
+
+        //check output for ternary character, note index if there is one.
         for (int i = 0; i < output.length(); i++) {
             char c = output.charAt(i);
             if (c >= 'e' && c <= 'g') {
                 ternaryPositionChar = i;
-            } else if (c == 'd') {
-                dRuleSize = output.length();
+            }
+
+            //if output has a d in it, so does the input. we want the d rule size to be based on the input size, otherwise we'll miss
+            //systems that have always shorter output than input.
+            else if (c == 'd') {
+                dRuleSize = input.length();
             }
         }
-
     }
 
     public String getInput() {
