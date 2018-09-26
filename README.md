@@ -11,7 +11,7 @@ Compiling the program:
 
 In this directory, type:
 
- javac -d COMPILED_DIRECTORY src/*.java
+    javac -d COMPILED_DIRECTORY src/*.java
 
 Where COMPILED_DIRECTORY is a directory you compile the output files. It's optional to run the -d option, but strongly recommended, because otherwise, the output files will compile in the src files.
 
@@ -21,24 +21,24 @@ Running the Rewrite System:
 
 From this directory, run:
   
-  java -cp COMPILED_DIRECTORY Main -inputnumber NUMBER OR -inputfile FILE_NAME [-outputdirectory DIRECTORY] [-verbose] [-aggregatefile] [-rewritesystem FILE_NAME]  
+      java -cp COMPILED_DIRECTORY Main -inputnumber NUMBER OR -inputfile FILE_NAME [-outputdirectory DIRECTORY] [-verbose] [-aggregatefile] [-rewritesystem FILE_NAME]  
 
 Either -inputnumber or -inputfile option is required. All other parameters are optional, but most are recommended.
 
-  -inputfile FILE_NAME: provides an input file that has numbers of input, one per line. Format for inputfile input: Uses Java's scanner, so any number token will be read as valid input, skipping anything else.
+- -inputfile FILE_NAME: provides an input file that has numbers of input, one per line. Format for inputfile input: Uses Java's scanner, so any number token will be read as valid input, skipping anything else.
   
-  -inputnumber NUMBER: plug in one number and generate the output of it.
+- -inputnumber NUMBER: plug in one number and generate the output of it.
   
-  -outputdirectory DIRECTORY: generates output into the given directory. If nothing, default will be Output in the local directory. DIRECTORY MUST EXIST, otherwise the program will not run.
+- -outputdirectory DIRECTORY: generates output into the given directory. If nothing, default will be Output in the local directory. DIRECTORY MUST EXIST, otherwise the program will not run.
   
-  -verbose: prints out lines which correspond to the rewrite rules and the numbers they represent as we generate the output files. 
+- -verbose: prints out lines which correspond to the rewrite rules and the numbers they represent as we generate the output files. 
+
+- -aggregatefile: outputs an aggregate csv file which shows input number, output number, number of rewrite steps, and number of array doubles. (Number of array doubles will be removed in a future version.)
   
-  -aggregatefile: outputs an aggregate csv file which shows input number, output number, number of rewrite steps, and number of array doubles. (Number of array doubles will be removed in a future version.)
-  
-  -rewritesystem FILE_NAME: takes in a text file in FILE_NAME representing a different system. If not provided, will default to BasicRewriteRules.txt, which is the default system.
+- -rewritesystem FILE_NAME: takes in a text file in FILE_NAME representing a different system. If not provided, will default to BasicRewriteRules.txt, which is the default system.
     Format for rewrite input:
-      -"INPUT OUTPUT" on a line denotes rule is to find a string INPUT and convert it to string OUTPUT.
-      -Any line beginning with a # is a comment, and will not be included.
+    - "INPUT OUTPUT" on a line denotes rule is to find a string INPUT and convert it to string OUTPUT.
+    - Any line beginning with a # is a comment, and will not be included.
 
 
 Version History:
