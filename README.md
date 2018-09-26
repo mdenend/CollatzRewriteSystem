@@ -1,11 +1,13 @@
 CollatzRewriteSystem
+==========================
 
 A simple program that takes either a single number or a list of numbers, as well as a text file denoting rewrite rules, and outputs a csv file with the number of steps it takes for the system to terminate. This system is optimized for specifically string rewriting rules that work with Professor Scott Aaronson's Collatz Conjecture String Rewrite System, meaning it will always try to find a d rule first, then move a ternary character to the c character and convert this into binary.
 
 A detailed explanation of Professor Aaronson's String Rewrite System will be available once the thesis tied to it is published. You may also contact me via email if you want a detailed explanation.
 
 
-COMPILING THE PROGRAM:
+Compiling the program:
+-------------------
 
 In this directory, type:
 
@@ -14,7 +16,8 @@ In this directory, type:
 Where COMPILED_DIRECTORY is a directory you compile the output files. It's optional to run the -d option, but strongly recommended, because otherwise, the output files will compile in the src files.
 
 
-RUNNING THE REWRITE SYSTEM:
+Running the Rewrite System:
+---------------------
 
 From this directory, run:
   
@@ -38,12 +41,14 @@ Either -inputnumber or -inputfile option is required. All other parameters are o
       -Any line beginning with a # is a comment, and will not be included.
 
 
-VERSION HISTORY:
+Version History:
+-------------------
 
 v1.0 (8/28/18): Made this repository public.
 
 
-PLANNED FUTURE EDITS:
+Planned Future Edits:
+--------------
 
 -Create output directory if one doesn't exist.
 -Remove number of array doubles parameter, as this number has never exceeded 1 in all testing run on this program so far.
